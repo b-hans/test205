@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ComicController;
+
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -12,6 +14,10 @@ Route::get('/', function () {
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
+
+Route::get('/comics', [ ComicController::class, 'list'])
+    ->middleware(['auth', 'verified'])
+    ->name('comics.list.');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
