@@ -10,9 +10,8 @@ class ComicController extends Controller
 {
     public function list () {
 
-        $comic = Comic::create(['title' => 'Hey tester']);
         $comics = Comic::all();
 
-        dd ('test', $comics, $comic);
+        return view('comics', ['comics' => $comics]);
     }
 }
