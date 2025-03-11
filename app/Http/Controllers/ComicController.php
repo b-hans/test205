@@ -12,7 +12,7 @@ class ComicController extends Controller
 
         $comics = Comic::all();
 
-        return redirect->view('comics', ['comics' => $comics]);
+        return view('comics', ['comics' => $comics] );
         
     }
 }

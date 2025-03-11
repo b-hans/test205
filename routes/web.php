@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\ComicController;
 
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
